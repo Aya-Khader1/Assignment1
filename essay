@@ -1,0 +1,103 @@
+// PART 2
+/******************************** */
+//  question 1:
+/**/ 
+forEach
+
+Type: Array method
+Usage: Iterates over each element of an array and executes a callback function for each element
+Cannot use break or continue inside it
+Does not return a value (always returns undefined)
+
+When to use it:
+
+When you want to perform an action on each element only
+You don’t need to stop the loop early
+
+------------------
+for...of
+
+Type: Loop over arrays, strings, or any iterable
+Can use break and continue
+Can work with await inside async functions
+
+When to use it:
+
+When you need flexibility to stop or skip elements
+When you want a more general loop
+Works with any iterable (array, string, Map, Set...)
+
+//  question 2:
+
+/*
+Hoisting is a behavior in JavaScript where declarations are moved to the top of their scope before the code is executed.
+
+However, only the declaration is hoisted, not the initialization (the value assignment).
+
+Example:
+
+console.log(x);
+var x = 5; Output: undefined
+JavaScript treats the code like this:
+
+var x;
+console.log(x);
+x = 5;
+
+So the variable x is declared and initialized with undefined before the assignment.
+
+The Temporal Dead Zone (TDZ) is the time between entering a scope and the line where a variable declared with let or const is defined.
+
+During this time, the variable exists but cannot be accessed. If you try to use it, JavaScript throws a ReferenceError.
+
+Example:
+
+console.log(y);
+let y = 10; Output: ReferenceError: Cannot access 'y' before initialization
+y is in the Temporal Dead Zone until it is declared.
+*/ 
+  
+//  question 3:
+
+/*
+loose equality operator (==):
+It compares values after performing type conversion (type coercion)
+
+strict equality operator (===):
+It compares both value and data type without converting types.
+*/ 
+
+//  question 4:
+
+/*
+try...catch is used to handle errors in JavaScript.
+
+The try block runs the code that might throw an error.
+If an error happens, the catch block runs and lets us handle the error without breaking the program
+The finally block (optional) always runs, whether there was an error or not.
+
+why it is important in async operations?
+
+In async code, promises or await can fail.
+Using try-catch prevents the program from crashing and lets us handle the error gracefully.
+*/ 
+
+//  question 5:
+
+/*
+Type Conversion (Explicit Conversion):
+Type conversion happens when the programmer manually converts a value from one type to 
+another using functions like Number(), String(), or Boolean().
+Example:
+let num = "123";
+console.log(Number(num)); // Output: 123
+
+Type Coercion (Implicit Conversion):
+Type coercion happens when JavaScript automatically
+converts one data type to another during an operation.
+Example:
+console.log("5" + 10); // Output: "510" (string concatenation)
+console.log("5" - 10); // Output: -5 (numeric subtraction)
+
+
+*/ 
